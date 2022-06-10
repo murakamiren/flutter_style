@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_style/components/custom_btn.dart';
 import 'package:flutter_style/components/text_component.dart';
+import 'package:flutter_style/views/layout.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,19 +16,24 @@ class HomeView extends StatelessWidget {
         title: const Text("hello"),
       ),
       body: SafeArea(
-          child: Column(
-        children: [
-          CustomBtn(
-            btnTitle: "hello props",
-            onPress: () {},
-          ),
-          TextComponent(innerTextProp: "test"),
-          CustomBtn(
-            btnTitle: "navigate",
-            onPress: () {},
-          ),
-        ],
-      )),
+        child: Column(
+          children: [
+            CustomBtn(
+              btnTitle: "hello props",
+              onPress: () {},
+            ),
+            TextComponent(innerTextProp: "test"),
+            CustomBtn(
+              btnTitle: "navigate",
+              onPress: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const LayoutView(),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
