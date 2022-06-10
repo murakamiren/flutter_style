@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_style/components/custom_btn.dart';
 import 'package:flutter_style/components/text_component.dart';
+import 'package:flutter_style/views/discover.dart';
 import 'package:flutter_style/views/layout.dart';
 
 class HomeView extends StatelessWidget {
@@ -14,14 +15,15 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "hello",
+          "flutter style",
           style: TextStyle(color: Colors.black87),
         ),
-        elevation: .6,
+        elevation: 2,
         backgroundColor: Colors.white,
       ),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomBtn(
               btnTitle: "hello props",
@@ -33,6 +35,14 @@ class HomeView extends StatelessWidget {
               onPress: () => Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const LayoutView(),
+                ),
+              ),
+            ),
+            CustomBtn(
+              btnTitle: "navigate to discover",
+              onPress: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const DiscoverView(),
                 ),
               ),
             ),
