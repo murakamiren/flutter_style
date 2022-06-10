@@ -10,16 +10,24 @@ class LayoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("layout"),
+        title: const Text("layout"),
       ),
-      body: Container(
-        padding: EdgeInsets.only(top: 24),
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.black,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(top: 24),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+              ),
+            ),
+            child: Box(),
           ),
-        ),
-        child: Box(),
+          Container(
+            child: Text("aaa"),
+          )
+        ],
       ),
     );
   }
