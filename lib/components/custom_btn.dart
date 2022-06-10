@@ -3,9 +3,14 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class CustomBtn extends StatelessWidget {
-  const CustomBtn({Key? key, required this.btnTitle, required this.onPress})
-      : super(key: key);
+  const CustomBtn({
+    Key? key,
+    // props args
+    required this.btnTitle,
+    required this.onPress,
+  }) : super(key: key);
 
+  // props
   final String btnTitle;
   final void Function() onPress;
 
