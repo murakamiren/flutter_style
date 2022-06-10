@@ -9,9 +9,12 @@ class Box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.yellow,
+        border: Border.all(color: Colors.black),
+      ),
       width: 300,
       height: 300,
-      color: Colors.deepOrange,
     );
   }
 }
