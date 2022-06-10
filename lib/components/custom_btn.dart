@@ -17,13 +17,13 @@ class CustomBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      child: Text(btnTitle),
       style: ElevatedButton.styleFrom(
         primary: Colors.cyan,
         onPrimary: Colors.white,
         shape: const StadiumBorder(),
       ),
       onPressed: onPress,
+      child: Text(btnTitle),
     );
   }
 }
