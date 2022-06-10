@@ -17,8 +17,15 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
           child: Column(
         children: [
-          CustomBtn(),
+          CustomBtn(
+            btnTitle: "hello props",
+            onPress: () {},
+          ),
           TextComponent(innerTextProp: "test"),
+          CustomBtn(
+            btnTitle: "navigate",
+            onPress: () {},
+          ),
         ],
       )),
     );
