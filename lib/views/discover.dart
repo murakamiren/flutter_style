@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_style/components/exploreIcon.dart';
 import 'package:flutter_style/components/navText.dart';
 import 'package:flutter_style/components/placeCard.dart';
 import 'package:flutter_style/components/userBox.dart';
@@ -117,6 +118,59 @@ class DiscoverView extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(
+              top: appBarHeight * 0.4,
+              left: _screenSize.width * 0.05,
+              right: _screenSize.width * 0.05,
+            ),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  ExploreIcon(
+                    screenSize: _screenSize,
+                    iconText: "Kayaking",
+                  ),
+                ],
+              ),
             ),
           ),
         ],
