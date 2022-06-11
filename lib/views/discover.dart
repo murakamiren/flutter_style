@@ -92,6 +92,33 @@ class DiscoverView extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(
+              top: appBarHeight * 0.4,
+              left: _screenSize.width * 0.05,
+              right: _screenSize.width * 0.05,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: const [
+                Text(
+                  "Explore more",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  "See All",
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
