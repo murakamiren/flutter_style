@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_style/components/navText.dart';
 import 'package:flutter_style/components/placeCard.dart';
 import 'package:flutter_style/components/userBox.dart';
+import 'package:flutter_style/constants/placeData.dart';
 
 class DiscoverView extends StatelessWidget {
   const DiscoverView({Key? key}) : super(key: key);
@@ -69,17 +70,28 @@ class DiscoverView extends StatelessWidget {
             ),
           ),
           Container(
-              margin: EdgeInsets.only(
-                top: appBarHeight * 0.4,
-                left: _screenSize.width * 0.05,
-              ),
-              child: Row(
-                children: [
-                  PlaceCard(
+            margin: EdgeInsets.only(
+              top: appBarHeight * 0.4,
+              left: _screenSize.width * 0.05,
+            ),
+            child: SizedBox(
+              height: _screenSize.width * 0.7,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                separatorBuilder: (context, index) => SizedBox(
+                  width: 12,
+                ),
+                itemCount: placeData.length,
+                itemBuilder: (context, index) {
+                  return PlaceCard(
                     screenSize: _screenSize,
-                  ),
-                ],
-              ))
+                    placeName: placeData[index].placeName,
+                    place: placeData[index].place,
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
