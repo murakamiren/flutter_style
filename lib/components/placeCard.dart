@@ -28,22 +28,22 @@ class PlaceCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               placeName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.place,
                   size: 12,
                 ),

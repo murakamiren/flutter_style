@@ -15,7 +15,7 @@ class DiscoverView extends StatelessWidget {
     var _screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.list),
+        leading: const Icon(Icons.list),
         elevation: 0,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black87,
@@ -78,7 +78,7 @@ class DiscoverView extends StatelessWidget {
               height: _screenSize.width * 0.7,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
-                separatorBuilder: (context, index) => SizedBox(
+                separatorBuilder: (context, index) => const SizedBox(
                   width: 12,
                 ),
                 itemCount: placeData.length,

@@ -17,12 +17,12 @@ class NavText extends StatelessWidget {
         children: [
           Text(
             navInnerText,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Visibility(
@@ -30,7 +30,7 @@ class NavText extends StatelessWidget {
             child: Container(
               width: 8,
               height: 8,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.black87,
               ),
