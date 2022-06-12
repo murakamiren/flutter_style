@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_style/components/buttomNav.dart';
 import 'package:flutter_style/components/exploreIcon.dart';
 import 'package:flutter_style/components/navText.dart';
 import 'package:flutter_style/components/placeCard.dart';
@@ -27,6 +28,7 @@ class DiscoverView extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNav(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
